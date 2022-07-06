@@ -43,7 +43,7 @@ composer run-script lint-php
 
 ## Questions and Answers
 
-### What do I need to do to start development?
+### What do I need to do before starting development?
 - Create `sources/config.json` file and fill it with the following data:
 ```json
 {
