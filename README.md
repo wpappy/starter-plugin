@@ -3,7 +3,7 @@
 Boilerplate for developing a WordPress plugin using [Wpappy library](https://github.com/wpappy/wpappy) and other helpful solutions.
 
 - [System Requirements](#system-requirements)
-- [Installation](#installation)
+- [Wpappy Library](#wpappy-library)
 - [CLI Commands](#cli-commands)
 - [Questions and Answers](#questions-and-answers)
 - [License](#license)
@@ -14,6 +14,9 @@ Boilerplate for developing a WordPress plugin using [Wpappy library](https://git
 - Composer
 - Node.js: ~14.0.0
 - NPM
+
+## Wpappy Library
+Read [the documentation section](https://github.com/wpappy/wpappy#documentation) to get started with the library.
 
 ## CLI Commands
 Use following commands in the application root directory.
