@@ -1,6 +1,6 @@
 # Wpappy Starter Plugin
 
-Boilerplate for developing a WordPress plugin using [Wpappy library](https://github.com/wpappy/wpappy) and other helpful solutions.
+Boilerplate for developing a WordPress plugin using WebPack, [Wpappy library](https://github.com/wpappy/wpappy) and other helpful solutions.
 
 - [System Requirements](#system-requirements)
 - [Wpappy Library](#wpappy-library)
