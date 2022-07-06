@@ -1,0 +1,9 @@
+{
+  "main": [
+    "./scripts/main.js",
+    "./styles/main.scss"
+  ],
+  "setting": [
+    "./styles/setting.scss"
+  ]
+}

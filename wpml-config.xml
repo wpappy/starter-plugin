@@ -1,0 +1,5 @@
+<wpml-config>
+	<admin-texts>
+		<key name="my_plugin_general_single_labels_hello_text_label"/>
+	</admin-texts>
+</wpml-config>

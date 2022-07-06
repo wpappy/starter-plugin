@@ -1,0 +1,33 @@
+.customize-control-wpappy_line {
+
+	+ .customize-control-wpappy_notice {
+		margin-top: -10px;
+	}
+}
+
+.wpappy-control-notice__title {
+	display: block;
+	margin-top: 20px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: normal;
+
+	+ .wpappy-control-notice__description {
+		margin-top: 5px;
+	}
+}
+
+.customize-section-description-container {
+
+	+ .customize-control-wpappy_notice,
+	+ [style="display: none;"] + .customize-control-wpappy_notice {
+
+		.wpappy-control-notice__title {
+			margin-top: 0;
+		}
+	}
+}
+
+.wpappy-control-notice__description {
+	margin: 0;
+}

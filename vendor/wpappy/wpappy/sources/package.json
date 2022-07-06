@@ -1,0 +1,63 @@
+{
+  "name": "wpappy-sources",
+  "version": "1.0.0",
+  "description": "Sources of Wpappy assets.",
+  "homepage": "https://github.com/wpappy/wpappy/blob/main/sources",
+  "license": "GPL-2.0-or-later",
+  "contributors": [
+    {
+      "name": "Dmitry Pripa",
+      "email": "i@dpripa.com",
+      "homepage": "https://dpripa.com"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "node": "14",
+  "browserslist": [
+    "last 2 versions",
+    "android 4",
+    "opera 12",
+    "ie 11"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jquery.are-you-sure": "^1.9.0",
+    "select2": "^4.0.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "~9.7.6",
+    "babel-loader": "~8.1.0",
+    "browser-sync": "^2.26.10",
+    "clean-webpack-plugin": "~3.0.0",
+    "copy-webpack-plugin": "~5.1.1",
+    "cross-env": "~7.0.2",
+    "css-loader": "~3.5.3",
+    "eslint": "~6.8.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "eslint-loader": "~4.0.2",
+    "file-loader": "~6.0.0",
+    "imagemin-mozjpeg": "~8.0.0",
+    "imagemin-webpack-plugin": "~2.4.2",
+    "mini-css-extract-plugin": "~0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "~5.0.3",
+    "postcss-loader": "~3.0.0",
+    "sass-loader": "~6.0",
+    "stylelint": "~12.0.1",
+    "stylelint-config-wordpress": "^17.0.0",
+    "stylelint-order-htmlacademy": "^1.0.1",
+    "stylelint-webpack-plugin": "~1.2.3",
+    "terser-webpack-plugin": "^2.3.7",
+    "webpack": "~4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-fix-style-only-entries": "~0.4.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack"
+  }
+}

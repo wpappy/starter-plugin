@@ -1,0 +1,42 @@
+{
+  "name": "wpappy/starter-plugin",
+  "version": "1.0.0",
+  "type": "wordpress-plugin",
+  "description": "Plugin based on the Wpappy library.",
+  "homepage": "https://github.com/wpappy/starter-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Dmitry Pripa",
+      "email": "i@dpripa.com",
+      "homepage": "https://dprioa.com"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "config": {
+    "platform-check": false,
+    "optimize-autoloader": true
+  },
+  "autoload": {
+    "psr-4": {
+      "My_Plugin\\": "includes/"
+    }
+  },
+  "require": {
+    "php": "^7.2.0",
+    "wpappy/wpappy": "1.0.4"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.3.1",
+    "wp-coding-standards/wpcs": "^2.2.1"
+  },
+  "scripts": {
+    "webpack-start": "cd sources && npm run start",
+    "webpack-build": "cd sources && npm run build",
+    "install-no-dev": "composer install --no-dev",
+    "optimize-autoloader": "composer dump-autoload --optimize",
+    "lint-php": "phpcs"
+  }
+}

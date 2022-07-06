@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<phpdocumentor configVersion="3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.phpdoc.org" xsi:noNamespaceSchemaLocation="https://docs.phpdoc.org/latest/phpdoc.xsd">
+	<title>Wpappy</title>
+	<paths>
+		<output>docs/api</output>
+		<cache>docs/cache</cache>
+	</paths>
+	<version number="1.0.0">
+		<api>
+			<default-package-name>App</default-package-name>
+			<extensions>
+				<extension>php</extension>
+			</extensions>
+			<source dsn=".">
+				<path>includes</path>
+			</source>
+			<visibility>public</visibility>
+			<ignore hidden="true" symlinks="true">
+				<path>includes/Core/**/*</path>
+				<path>includes/Core.php</path>
+				<path>includes/Helper/**/*</path>
+				<path>includes/Integration/Plugin.php</path>
+				<path>includes/Basic_Feature.php</path>
+				<path>includes/Feature.php</path>
+				<path>includes/Setting/Control/Control.php</path>
+				<path>includes/Setting/Control/Simple_Control.php</path>
+				<path>includes/Setting/Base.php</path>
+				<path>includes/Setting/Box.php</path>
+				<path>includes/Setting/Content.php</path>
+				<path>includes/Setting/Control.php</path>
+				<path>includes/Setting/Handler.php</path>
+				<path>includes/Setting/Page.php</path>
+				<path>includes/Setting/Setting.php</path>
+				<path>includes/Setting/Storage.php</path>
+				<path>includes/Setting/Sub_Tab.php</path>
+				<path>includes/Setting/Submit_Btn.php</path>
+				<path>includes/Setting/Tab.php</path>
+			</ignore>
+		</api>
+	</version>
+</phpdocumentor>

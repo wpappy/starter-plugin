@@ -1,0 +1,41 @@
+{
+	"name": "wpappy",
+  "basePHPClassName": "Wpappy",
+	"version": "1.0.4",
+  "rootPath": "../..",
+	"directories": [
+    "assets",
+    "includes",
+		"vendor",
+    "sources/images",
+    "sources/scripts",
+    "sources/styles",
+    "tools/scripts"
+	],
+	"files": [
+    "sources/.eslintignore",
+    "sources/.eslintrc",
+    "sources/.htaccess",
+    "sources/.stylelintignore",
+    "sources/.stylelintrc",
+    "sources/config-sample.json",
+    "sources/entry.json",
+    "sources/package-lock.json",
+    "sources/package.json",
+    "sources/webpack.config.js",
+    "tools/.htaccess",
+    "tools/cache.json",
+    "tools/config.json",
+    "tools/package.json",
+    "tools/package-lock.json",
+    ".editorconfig",
+    ".gitignore",
+		"composer.json",
+    "composer.lock",
+    "index.php",
+    "LICENSE",
+    "phpcs.xml",
+    "phpdoc.dist.xml",
+    "README.md"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "wpappy-tools",
+  "version": "1.0.0",
+  "description": "Developer tools for Wpappy.",
+  "homepage": "https://github.com/wpappy/wpappy/blob/main/tools",
+  "license": "GPL-2.0-or-later",
+  "contributors": [
+    {
+      "name": "Dmitry Pripa",
+      "email": "i@dpripa.com",
+      "homepage": "https://dpripa.com"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "node": "14",
+  "dependencies": {
+    "fs": "~0.0.1-security",
+    "glob": "~7.2.0",
+    "archiver": "~5.0.0",
+    "log-beautify": "~1.2.0"
+  },
+  "scripts": {
+    "release": "npm run version && npm run zip && cd ../ && composer doc",
+    "zip": "cd .. && composer no-dev && cd tools/scripts && node zip.js && cd ../.. && composer install",
+    "version": "cd scripts && node version.js && cd ../.. && composer optimize"
+  }
+}

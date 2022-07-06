@@ -1,0 +1,6 @@
+{
+	"browsersync": {
+		"proxy": "http://wpappy.loc",
+		"port": 9999
+	}
+}

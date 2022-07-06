@@ -1,0 +1,54 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: my_plugin\n"
+"POT-Creation-Date: 2022-07-02 22:58+0300\n"
+"PO-Revision-Date: 2021-04-25 23:55+0300\n"
+"Last-Translator: \n"
+"Language-Team: Wpappy\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_n;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: languages\n"
+"X-Poedit-SearchPathExcluded-2: sources\n"
+"X-Poedit-SearchPathExcluded-3: assets\n"
+
+#: includes/Config.php:19
+msgid "Save changes"
+msgstr ""
+
+#: includes/Config.php:20
+msgid "Something went wrong."
+msgstr ""
+
+#: includes/Config.php:21
+msgid "Changes saved."
+msgstr ""
+
+#: includes/Setting.php:17
+msgid "My Plugin"
+msgstr ""
+
+#: includes/Setting.php:18
+msgid "My Plugin Settings"
+msgstr ""
+
+#: includes/Setting/General.php:18
+msgid "Single Post"
+msgstr ""
+
+#: includes/Setting/General.php:26
+msgid "\"Hello\" text label"
+msgstr ""
+
+#: includes/Setting/General.php:28
+msgid "Hello from the plugin!"
+msgstr ""

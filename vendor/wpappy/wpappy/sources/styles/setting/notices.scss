@@ -1,0 +1,11 @@
+.wpappy-notices {
+	padding: 0 20px 0 0;
+
+	.notice {
+		margin: 15px 0;
+
+		+ .notice {
+			margin-bottom: 5px;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+  "browsersync": {
+    "proxy": "http://localhost",
+    "port": 9999
+  }
+}

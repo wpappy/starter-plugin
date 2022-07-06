@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<ruleset>
+	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs"/>
+	<rule ref="WordPress"/>
+	<config name="minimum_supported_wp_version" value="5.0.0"/>
+
+	<file>.</file>
+	<exclude-pattern>assets/*</exclude-pattern>
+	<exclude-pattern>docs/*</exclude-pattern>
+	<exclude-pattern>releases/*</exclude-pattern>
+	<exclude-pattern>sources/*</exclude-pattern>
+	<exclude-pattern>tools/*</exclude-pattern>
+	<exclude-pattern>vendor/*</exclude-pattern>
+
+	<rule ref="WordPress.PHP">
+		<exclude name="WordPress.PHP.DisallowShortTernary"/>
+	</rule>
+
+	<rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+		<exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<exclude name="WordPress.WP.I18n.NonSingularStringLiteralDomain"/>
+		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+	</rule>
+
+	<rule ref="Generic.Commenting">
+		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
+	</rule>
+
+	<rule ref="Squiz.Commenting">
+		<exclude name="Squiz.Commenting"/>
+	</rule>
+
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="strict_class_file_names" value="false"/>
+		</properties>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+</ruleset>

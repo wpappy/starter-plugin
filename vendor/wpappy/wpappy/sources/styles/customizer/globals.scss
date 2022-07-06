@@ -1,0 +1,91 @@
+#customize-theme-controls .control-section:last-of-type.open {
+	// wp makes a frame for this element, which looks more like a bug - remove it
+	border-bottom-color: transparent;
+}
+
+.locale-ru-ru #customize-header-actions .button {
+	padding-bottom: 0;
+}
+
+/**
+ * Sections & panels
+ */
+
+div.customize-section-description {
+	margin: 30px 0 10px;
+}
+
+#customize-controls .customize-info,
+.control-section-nav_menu .customize-section-description-container,
+.control-section-new_menu .customize-section-description-container,
+.customize-section-description-container {
+	margin-bottom: 20px;
+
+	+ .customize-control {
+		margin-top: 10px;
+	}
+}
+
+#customize-controls .customize-info {
+
+	+ #customize-theme-controls,
+	+ .control-section {
+		margin-top: -5px;
+	}
+
+	+ .customize-control-title {
+		margin-top: 30px;
+	}
+}
+
+/**
+ * Controls
+ */
+
+.customize-control {
+	margin-bottom: 20px;
+}
+
+.customize-control-title {
+	margin-bottom: 8px;
+	line-height: normal;
+
+	+ .customize-control-notifications-container + .customize-control-description {
+		margin-top: -3px;
+	}
+}
+
+.customize-control-description {
+	margin-bottom: 7px;
+}
+
+/**
+ * Color picker
+ */
+
+.wp-picker-container {
+
+	.wp-picker-input-wrap {
+		margin-top: 6px;
+	}
+
+	.wp-color-result.button {
+		margin: 0;
+	}
+}
+
+/**
+ * Checkbox
+ */
+
+.customize-control-checkbox {
+
+	.customize-inside-control-row {
+		padding: 0;
+		line-height: 1.4;
+	}
+
+	.customize-control-description {
+		margin: 0;
+	}
+}

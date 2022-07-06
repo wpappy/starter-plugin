@@ -1,0 +1,12 @@
+node_modules
+sources/config.json
+vendor/*
+!vendor/wpappy
+!vendor/autoload.php
+!vendor/composer
+vendor/composer/installed.json
+vendor/composer/installed.php
+vendor/composer/installedVersions.php
+.DS_Store
+Thumbs.db
+ehthumbs.db

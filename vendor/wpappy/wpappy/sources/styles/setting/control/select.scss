@@ -1,0 +1,10 @@
+@import "~select2/dist/css/select2.css";
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] { /* stylelint-disable-line */
+	background-color: #2271b1;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple { /* stylelint-disable-line */
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+}

@@ -1,0 +1,10 @@
+{
+  "customizer": [
+    "./styles/customizer.scss",
+    "./scripts/customizer.js"
+  ],
+  "setting": [
+    "./styles/setting.scss",
+    "./scripts/setting.js"
+  ]
+}
