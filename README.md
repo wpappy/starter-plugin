@@ -16,7 +16,7 @@ Boilerplate for developing a WordPress plugin using [Wpappy library](https://git
 - NPM
 
 ## Wpappy Library
-Read [the documentation section](https://github.com/wpappy/wpappy/#documentation) to get started with the library.
+Read [the documentation section](https://github.com/wpappy/wpappy/#documentation) in the `README.md` file of the Wpappy repository to get started with the library.
 
 ## CLI Commands
 Use following commands in the application root directory.
