@@ -65,7 +65,7 @@ Just add an entry to the `sources/entry.json` file, using the existing example.
 No, WebPack automatically deploys it to the `assets` directory with the same directory hierarchy. In addition, the images will be auto-optimized without quality loss.
 
 ### Why aren't the `assets` and partially `vendor` directories ignored?
-We store an application ready for deployment in a repository. If this is not what you need in your case, just add these directories to the `.gitignore` file.
+We store an application in a repository as ready to use. If this is not what you need in your case, just add these directories to the `.gitignore` file.
 
 ## License
 Wpappy Starter Plugin is free software, and is released under the terms of the GPL (GNU General Public License) version 2 or (at your option) any later version. See [LICENSE](https://github.com/wpappy/starter-plugin/blob/main/LICENSE).
