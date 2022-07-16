@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpappy_1_0_4;
+namespace Wpappy_1_0_5;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -64,7 +64,7 @@ class App {
 		$this->env       = $is_theme ? 'theme' : 'plugin';
 
 		if ( ! $is_theme && ! $is_plugin ) {
-			Core\Debug::raw_die( 'Wrong application root file.', null, $this->key );
+			Core\Debug::raw_die( 'Wrong the application root file.', null, $this->key );
 		}
 
 		$this->core()->debug()->setup();
@@ -96,13 +96,13 @@ class App {
 	/**
 	 * Get the singleton instance of Wpappy for your application.
 	 *
-	 * @param string $key The application key. It's best to use the `__NAMESPACE__` constant on initial call. Only "_" is allowed as a word separator. Also key will be auto-converted to lowercase. Be careful when changing this parameter in a live application because it'll make the application as new to the environment.
-	 * @param string $root_file Required only on initial call. Use the `__FILE__` constant of the application's root file (index.php / functions.php).
+	 * @param string $key The application key. It's best to use the `__NAMESPACE__` constant on initial call. Only "_" is allowed as a word separator. Also key will be auto-converted to lowercase. WARNING: be careful when changing this parameter in a live application because it'll make the application as new to the environment.
+	 * @param string $root_file Use the `__FILE__` constant of the application's root file (index.php / functions.php). Required only on initial call.
 	 */
 	public static function get( string $key, string $root_file = '' ): self {
 		if ( empty( self::$instances[ $key ] ) ) {
 			if ( empty( $root_file ) ) {
-				Core\Debug::raw_die( 'Application root file is required on initial call.', null, $key );
+				Core\Debug::raw_die( 'The application root file is required on the initial call.', null, $key );
 			}
 
 			self::$instances[ $key ] = new self( $key, $root_file );

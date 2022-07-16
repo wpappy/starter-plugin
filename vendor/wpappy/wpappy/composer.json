@@ -1,6 +1,6 @@
 {
   "name": "wpappy/wpappy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "wordpress-library",
   "description": "The library that introduces a smart layer between the WordPress environment and your plugin or theme.",
   "homepage": "https://github.com/wpappy/wpappy",
@@ -18,11 +18,11 @@
   "config": {
     "platform-check": false,
     "optimize-autoloader": true,
-    "autoloader-suffix": "_Wpappy_1_0_4"
+    "autoloader-suffix": "_Wpappy_1_0_5"
   },
   "autoload": {
     "psr-4": {
-      "Wpappy_1_0_4\\": "includes/"
+      "Wpappy_1_0_5\\": "includes/"
     }
   },
   "require": {
@@ -33,9 +33,12 @@
     "wp-coding-standards/wpcs": "^2.2.1"
   },
   "scripts": {
+    "webpack-start": "cd sources && npm run start",
+    "webpack-build": "cd sources && npm run build",
     "no-dev": "composer install --no-dev",
     "optimize": "composer dump-autoload --optimize",
     "wpcs": "phpcs",
-    "doc": "rm -rf docs/api && phpDocumentor"
+    "doc": "rm -rf docs/api && phpDocumentor",
+    "release": "cd tools && npm run release"
   }
 }

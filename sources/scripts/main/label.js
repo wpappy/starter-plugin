@@ -1,5 +1,5 @@
 const { labelText } = window.myPluginMain;
 
-export default function initHeader() {
+export default function initLabel() {
 	console.log( labelText );
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Wpappy_1_0_4\Debug;
+namespace Wpappy_1_0_5\Debug;
 
-use Wpappy_1_0_4\App;
-use Wpappy_1_0_4\Feature;
+use Wpappy_1_0_5\App;
+use Wpappy_1_0_5\Feature;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -11,6 +11,13 @@ defined( 'ABSPATH' ) || exit;
  * Manage logs.
  */
 class Log extends Feature {
+
+	/**
+	 * Get a path to the log file.
+	 */
+	public function get_path( string $group = 'app' ): string {
+		return $this->core->debug()->log()->get_path( $group );
+	}
 
 	/**
 	 * Add a message to the log file.

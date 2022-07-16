@@ -1,9 +1,9 @@
 <?php
 
-namespace Wpappy_1_0_4\Core\Debug;
+namespace Wpappy_1_0_5\Core\Debug;
 
-use Wpappy_1_0_4\Core;
-use Wpappy_1_0_4\Core\Feature;
+use Wpappy_1_0_5\Core;
+use Wpappy_1_0_5\Core\Feature;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -22,12 +22,12 @@ class Log extends Feature {
 		$this->delete_key = "{$this->key}_delete";
 	}
 
-	public function get_path( string $path = '' ): string {
+	protected function get_raw_path( string $path = '' ): string {
 		return $this->path . ( $path ? DIRECTORY_SEPARATOR . $path : '' );
 	}
 
-	protected function get_group_path( string $group ): string {
-		return $this->get_path( "$group.log" );
+	public function get_path( string $group = 'core' ): string {
+		return $this->get_raw_path( "$group.log" );
 	}
 
 	public function add( string $message, string $level = 'warning', string $group = 'core' ): void {
@@ -41,7 +41,7 @@ class Log extends Feature {
 
 		$this->create_dir();
 
-		$group = fopen( $this->get_group_path( $group ), 'a' ); // phpcs:ignore
+		$group = fopen( $this->get_path( $group ), 'a' ); // phpcs:ignore
 
 		$timestamp = gmdate( 'n/j/Y H:i:s' );
 		$content   = "[$timestamp] $level: $message\n";
@@ -51,13 +51,13 @@ class Log extends Feature {
 	}
 
 	protected function create_dir(): void {
-		if ( is_dir( $this->get_path() ) ) {
+		if ( is_dir( $this->get_raw_path() ) ) {
 			return;
 		}
 
-		mkdir( $this->get_path(), 0755, true );
+		mkdir( $this->get_raw_path(), 0755, true );
 
-		$htaccess_path = $this->get_path( '.htaccess' );
+		$htaccess_path = $this->get_raw_path( '.htaccess' );
 
 		if ( file_exists( $htaccess_path ) ) {
 			return;
@@ -70,18 +70,18 @@ class Log extends Feature {
 	}
 
 	public function exists( string $group = 'core' ): bool {
-		return file_exists( $this->get_group_path( $group ) );
+		return file_exists( $this->get_path( $group ) );
 	}
 
 	public function get( string $group = 'core' ): string {
 		return $this->exists( $group ) ?
-			nl2br( file_get_contents( $this->get_group_path( $group ) ) ) : // phpcs:ignore
+			nl2br( file_get_contents( $this->get_path( $group ) ) ) : // phpcs:ignore
 			'';
 	}
 
 	public function get_size( string $group = 'core', bool $int = false ) /* string|int */ {
 		$size = $this->exists( $group ) ?
-			round( filesize( $this->get_group_path( $group ) ) / 1024, 3 ) :
+			round( filesize( $this->get_path( $group ) ) / 1024, 3 ) :
 			0;
 
 		return $int ? $size : "{$size}KB";
@@ -102,7 +102,7 @@ class Log extends Feature {
 			return;
 		}
 
-		unlink( $this->get_group_path( $group ) );
+		unlink( $this->get_path( $group ) );
 
 		if ( empty( $_GET[ $this->delete_key ] ) ) { // phpcs:ignore
 			return;

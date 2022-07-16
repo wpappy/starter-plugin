@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpappy_1_0_4;
+namespace Wpappy_1_0_5;
 
 use ReflectionClass;
 

@@ -1,6 +1,6 @@
 import 'jquery';
-import initHeader from './main/label';
+import initLabel from './main/label';
 
 $( document ).on( 'ready', function() {
-	initHeader();
+	initLabel();
 });
