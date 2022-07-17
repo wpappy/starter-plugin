@@ -10,8 +10,8 @@ defined( 'ABSPATH' ) || exit;
  * }
  */
 ?>
-<div class="my-label">
-	<div class="my-label__content">
+<div class="my-plugin-label">
+	<div class="my-plugin-label__content">
 		<?php echo esc_html( $args['label'] ); ?>
 	</div>
 </div>

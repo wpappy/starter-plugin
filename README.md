@@ -1,10 +1,10 @@
 # Wpappy Starter Plugin
 
-Boilerplate for developing a WordPress plugin using WebPack, [Wpappy library](https://github.com/wpappy/wpappy) and other helpful solutions.
+Boilerplate for developing a WordPress plugin (hereinafter referred to as the application) using WebPack, [Wpappy library](https://github.com/wpappy/wpappy) and other helpful solutions.
 
 - [System Requirements](#system-requirements)
 - [Wpappy Library](#wpappy-library)
-- [CLI Commands](#cli-commands)
+- [CLI Commands (Composer)](#cli-commands-composer)
 - [Questions and Answers](#questions-and-answers)
 - [License](#license)
 
@@ -18,8 +18,9 @@ Boilerplate for developing a WordPress plugin using WebPack, [Wpappy library](ht
 ## Wpappy Library
 Read [the "Documentation" section](https://github.com/wpappy/wpappy/blob/main/README.md#documentation) in the `README.md` file of the Wpappy repository to get started with the library.
 
-## CLI Commands
+## CLI Commands (Composer)
 Use following commands in the application root directory.
+
 - Start the WebPack watcher and the BrowserSync:
 ```bash
 composer run-script webpack-start
@@ -44,7 +45,7 @@ composer run-script lint-php
 ## Questions and Answers
 
 ### What do I need to do before starting development?
-- Create `sources/config.json` file and fill it with the following data:
+- Create `sources/config.json` file (or edit `sources/config-default.json` for the default repository configuration) and fill it with the following data:
 ```json
 {
   "browsersync": {
@@ -53,10 +54,13 @@ composer run-script lint-php
   }
 }
 ```
+- Search for `My_Plugin` in the application root directory to capture default PHP namespace and replace it with your own.
+- Also search for `my-plugin` to replace the default CSS class prefixes.
 - Then run following command in the application root directory to install Composer and Node.js dependencies:
 ```bash
 composer install && cd sources && npm install
 ```
+- Now everything is ready, let's create. 😉
 
 ### How I can add entry points for JS or CSS to the WebPack process?
 Just add an entry to the `sources/entry.json` file, using the existing example.
