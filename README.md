@@ -3,6 +3,7 @@
 Boilerplate for developing a WordPress plugin (hereinafter referred to as the application) using WebPack, [Wpappy library](https://github.com/wpappy/wpappy) and other helpful solutions.
 
 - [System Requirements](#system-requirements)
+- [Installation](#installation)
 - [Wpappy Library](#wpappy-library)
 - [CLI Commands (Composer)](#cli-commands-composer)
 - [Questions and Answers](#questions-and-answers)
@@ -14,6 +15,25 @@ Boilerplate for developing a WordPress plugin (hereinafter referred to as the ap
 - Composer
 - Node.js: ~14.0.0
 - NPM
+
+## Installation
+- Create `sources/config.json` file (or edit `sources/config-default.json` for the default repository configuration) and fill it with the following data:
+```json
+{
+  "browsersync": {
+    "proxy": "http://mydomain.loc", // Domain from the local server.
+    "port": 9999 // Port for the BrowserSync server.
+  }
+}
+```
+- Search for `My_Plugin` in the application's root directory to capture default PHP namespace and replace it with your own.
+- Search for `my-plugin` to replace the default CSS class prefixes.
+- Also don't forget to edit the fields in the `composer.json` and `sources/package.json` files, and edit the header information in the `index.php` file.
+- Then run following command in the application root directory to install Composer and Node.js dependencies:
+```bash
+composer install && cd sources && npm install
+```
+- Now everything is ready, let's create. 😉
 
 ## Wpappy Library
 Read [the "Documentation" section](https://github.com/wpappy/wpappy/blob/main/README.md#documentation) in the `README.md` file of the Wpappy repository to get started with the library.
@@ -43,24 +63,6 @@ composer run-script lint-php
 ```
 
 ## Questions and Answers
-
-### What do I need to do before starting development?
-- Create `sources/config.json` file (or edit `sources/config-default.json` for the default repository configuration) and fill it with the following data:
-```json
-{
-  "browsersync": {
-    "proxy": "http://mydomain.loc", // Domain from the local server.
-    "port": 9999 // Port for the BrowserSync server.
-  }
-}
-```
-- Search for `My_Plugin` in the application root directory to capture default PHP namespace and replace it with your own.
-- Also search for `my-plugin` to replace the default CSS class prefixes.
-- Then run following command in the application root directory to install Composer and Node.js dependencies:
-```bash
-composer install && cd sources && npm install
-```
-- Now everything is ready, let's create. 😉
 
 ### How I can add entry points for JS or CSS to the WebPack process?
 Just add an entry to the `sources/entry.json` file, using the existing example.
