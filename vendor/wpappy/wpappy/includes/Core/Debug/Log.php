@@ -1,9 +1,9 @@
 <?php
 
-namespace Wpappy_1_0_5\Core\Debug;
+namespace Wpappy_1_0_6\Core\Debug;
 
-use Wpappy_1_0_5\Core;
-use Wpappy_1_0_5\Core\Feature;
+use Wpappy_1_0_6\Core;
+use Wpappy_1_0_6\Core\Feature;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -31,6 +31,10 @@ class Log extends Feature {
 	}
 
 	public function add( string $message, string $level = 'warning', string $group = 'core' ): void {
+		if ( 'core' === $group && ! WP_DEBUG_LOG ) {
+			return;
+		}
+
 		if ( ! function_exists( 'wp_get_current_user' ) ) {
 			include_once ABSPATH . 'wp-includes' . DIRECTORY_SEPARATOR . 'pluggable.php';
 		}

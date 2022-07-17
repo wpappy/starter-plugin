@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41fa15fbf2229557f81df19dd057ec08",
+    "content-hash": "f3e500b49a0fe64e579767f26bd1c0d6",
     "packages": [
         {
             "name": "wpappy/wpappy",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpappy/wpappy.git",
-                "reference": "c15593e9f4e84a7773e8f0d430a131227a685fb9"
+                "reference": "c3cc1872b541c04d363dd88d45c1b3f55a67c59d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpappy/wpappy/zipball/c15593e9f4e84a7773e8f0d430a131227a685fb9",
-                "reference": "c15593e9f4e84a7773e8f0d430a131227a685fb9",
+                "url": "https://api.github.com/repos/wpappy/wpappy/zipball/c3cc1872b541c04d363dd88d45c1b3f55a67c59d",
+                "reference": "c3cc1872b541c04d363dd88d45c1b3f55a67c59d",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,7 @@
             "type": "wordpress-library",
             "autoload": {
                 "psr-4": {
-                    "Wpappy_1_0_5\\": "includes/"
+                    "Wpappy_1_0_6\\": "includes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -51,9 +51,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wpappy/wpappy/issues",
-                "source": "https://github.com/wpappy/wpappy/tree/1.0.5"
+                "source": "https://github.com/wpappy/wpappy/tree/1.0.6"
             },
-            "time": "2022-07-06T00:38:42+00:00"
+            "time": "2022-07-17T15:15:06+00:00"
         }
     ],
     "packages-dev": [

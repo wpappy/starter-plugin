@@ -20,8 +20,8 @@ The library that introduces a smart layer between the WordPress environment and 
 
 ## Boilerplates
 The following template repositories are the best point to start developing a new WordPress application:
+- [Starter Theme](https://github.com/wpappy/starter-theme)
 - [Starter Plugin](https://github.com/wpappy/starter-plugin)
-- Starter Theme (Coming soon)
 
 ## Manual Installation
 Run the following command in root directory of your application to install using Composer:
@@ -32,7 +32,7 @@ Alternatively, you can [download the latest release](https://github.com/wpappy/w
 
 ## Documentation
 The latest documentation is published on [wpappy.dpripa.com](https://wpappy.dpripa.com).\
-For convenience, it's better to start from [the entry point](https://wpappy.dpripa.com/classes/Wpappy-1-0-5-App.html) of the library.
+For convenience, it's better to start from [the entry point](https://wpappy.dpripa.com/classes/Wpappy-1-0-6-App.html) of the library.
 
 If you need documentation for previous versions, follow these instructions:
 - Install [phpDocumentor](https://www.phpdoc.org) into your system.
@@ -58,7 +58,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 // Always be sure that the Wpappy namespace matches the installed version of the library.
 // This is because other plugin and theme may use a different version.
 // For example, where 'Wpappy_x_x_x' version is x.x.x.
-use Wpappy_1_0_5\App as App;
+use Wpappy_1_0_6\App as App;
 
 // Define a function that returns the singleton instance of Wpappy for your application.
 function app(): App {
@@ -67,7 +67,7 @@ function app(): App {
 
 new Setup();
 ```
-You can see an example of simpleton usage here. It's a structural pattern provided by Wpappy for the WordPress based applications. Read more about [simpleton](https://wpappy.dpripa.com/classes/Wpappy-1-0-5-Simpleton.html).
+You can see an example of simpleton usage here. It's a structural pattern provided by Wpappy for the WordPress based applications. Read more about [simpleton](https://wpappy.dpripa.com/classes/Wpappy-1-0-6-Simpleton.html).
 
 #### Setup.php
 ```php

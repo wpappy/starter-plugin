@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpappy_1_0_5;
+namespace Wpappy_1_0_6;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -168,7 +168,7 @@ class Setting extends Feature {
 	/**
 	 * Add a setting.
 	 *
-	 * @param string $type Type of the setting control. <a href="https://wpappy.dpripa.com/namespaces/wpappy-1-0-5-setting-control.html">View the list</a> of available controls. You can also pass the classname of the custom control.
+	 * @param string $type Type of the setting control. <a href="https://wpappy.dpripa.com/namespaces/wpappy-1-0-6-setting-control.html">View the list</a> of available controls. You can also pass the classname of the custom control.
 	 * @param array $args Configuration of the setting. A control can have its own additional arguments, you can find them on each control's documentation page. General arguments:
 	 *  - `'default'` - default value.
 	 *  - `'description'` - setting description.

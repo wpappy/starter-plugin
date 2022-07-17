@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpappy_1_0_5\Integration;
+namespace Wpappy_1_0_6\Integration;
 
 defined( 'ABSPATH' ) || exit;
 

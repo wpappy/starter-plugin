@@ -22,8 +22,8 @@
     "log-beautify": "~1.2.0"
   },
   "scripts": {
-    "release": "npm run version && npm run zip && cd ../ && composer doc",
-    "zip": "cd .. && composer no-dev && cd tools/scripts && node zip.js && cd ../.. && composer install",
-    "version": "cd scripts && node version.js && cd ../.. && composer optimize"
+    "release": "npm run change-version && npm run pack && cd ../ && composer generate-doc",
+    "pack": "cd .. && composer install-no-dev && cd tools/scripts && node pack-release.js && cd ../.. && composer install",
+    "change-version": "cd scripts && node change-version.js && cd ../.. && composer optimize-autoloader"
   }
 }

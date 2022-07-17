@@ -1,8 +1,8 @@
 <?php
 
-namespace Wpappy_1_0_5\Media;
+namespace Wpappy_1_0_6\Media;
 
-use Wpappy_1_0_5\Feature;
+use Wpappy_1_0_6\Feature;
 
 defined( 'ABSPATH' ) || exit;
 

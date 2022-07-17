@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Wpappy_1_0_5\\' => array($vendorDir . '/wpappy/wpappy/includes'),
+    'Wpappy_1_0_6\\' => array($vendorDir . '/wpappy/wpappy/includes'),
     'My_Plugin\\' => array($baseDir . '/includes'),
 );
