@@ -1,6 +1,6 @@
 {
   "name": "my-plugin",
-  "dirs": [
+  "directories": [
     "assets",
     "includes",
     "languages",

@@ -37,6 +37,6 @@
     "webpack-build": "cd sources && npm run build",
     "optimize-autoloader": "composer dump-autoload --optimize",
     "lint-php": "phpcs",
-    "pack-prod-zip": "composer run-script webpack-build && composer install --no-dev && cd tools && npm run pack-prod-zip && cd .. && composer install"
+    "pack-production-zip": "composer run-script webpack-build && composer install --no-dev && cd tools && npm run pack-production-zip && cd .. && composer install"
   }
 }

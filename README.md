@@ -57,9 +57,9 @@ composer run-script optimize-autoloader
 ```bash
 composer run-script lint-php
 ```
-- Get the zip archive of the application with production files to the `prod-zip` directory (manage the configuration in the `prod-zip.config.json` file):
+- Get the zip archive of the application with production files to the `production-zip` directory (manage the configuration in the `production-zip.config.json` file):
 ```bash
-composer run-script pack-prod-zip
+composer run-script pack-production-zip
 ```
 
 ## Questions and Answers

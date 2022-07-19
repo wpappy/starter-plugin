@@ -23,6 +23,6 @@
     "log-beautify": "~1.2.0"
   },
   "scripts": {
-    "pack-prod-zip": "cd scripts && node pack-prod-zip.js"
+    "pack-production-zip": "cd scripts && node pack-production-zip.js"
   }
 }

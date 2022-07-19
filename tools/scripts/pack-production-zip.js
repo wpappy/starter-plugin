@@ -1,6 +1,6 @@
 const rootPath = '../..';
-const configName = 'prod-zip.config.json';
-const destDirName = 'prod-zip';
+const configName = 'production-zip.config.json';
+const destDirName = 'production-zip';
 
 const fs = require( 'fs' );
 const archiver = require( 'archiver' );
@@ -17,14 +17,14 @@ if ( fs.existsSync( rootPath + '/' + configName ) ) {
 		const output = fs.createWriteStream( rootPath + '/' + destDirName + '/' + config.name + '.zip' );
 		const archive = archiver( 'zip', {});
 
-		const refsDefined = config.hasOwnProperty( 'dirs' ) && Array.isArray( config.dirs ) &&
+		const refsDefined = config.hasOwnProperty( 'directories' ) && Array.isArray( config.directories ) &&
 			config.hasOwnProperty( 'files' ) && Array.isArray( config.files ) &&
 			( config.files.length || config.files.length );
 
 		if ( refsDefined ) {
 			output.on( 'close', function() {
 				console.log( '\n' );
-				log.success_( '"' + config.name + '.zip" deployed to the releases folder.' );
+				log.success_( '"' + config.name + '.zip" deployed to the "' + destDirName + '" directory.' );
 				console.log( '\n' )
 			});
 
@@ -34,10 +34,10 @@ if ( fs.existsSync( rootPath + '/' + configName ) ) {
 
 			archive.pipe( output );
 
-			let dirs = config.dirs;
+			let directories = config.directories;
 
-			for ( let i = 0; i < dirs.length; i++ ) {
-				archive.directory( rootPath + '/' + dirs[i], config.name + '/' + dirs[i], null );
+			for ( let i = 0; i < directories.length; i++ ) {
+				archive.directory( rootPath + '/' + directories[i], config.name + '/' + directories[i], null );
 			}
 
 			let files = config.files;
@@ -49,7 +49,7 @@ if ( fs.existsSync( rootPath + '/' + configName ) ) {
 			archive.finalize();
 
 		} else {
-			console.error( '"dirs" and "files" fields is required in the "' + configName + '" file and must be arrays. Also, at least one of them must be non-empty.' );
+			console.error( '"directories" and "files" fields is required in the "' + configName + '" file and must be arrays. Also, at least one of them must be non-empty.' );
 		}
 
 	} else {
