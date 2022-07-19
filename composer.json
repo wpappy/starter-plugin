@@ -35,8 +35,8 @@
   "scripts": {
     "webpack-start": "cd sources && npm run start",
     "webpack-build": "cd sources && npm run build",
-    "install-no-dev": "composer install --no-dev",
     "optimize-autoloader": "composer dump-autoload --optimize",
-    "lint-php": "phpcs"
+    "lint-php": "phpcs",
+    "pack-prod-zip": "composer install --no-dev && cd tools && npm run pack-prod-zip && cd .. && composer install"
   }
 }

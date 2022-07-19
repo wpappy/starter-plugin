@@ -27,11 +27,11 @@ Boilerplate for developing a WordPress plugin (hereinafter referred to as the ap
 }
 ```
 - Search for `My_Plugin` in the application's root directory to capture default PHP namespace and replace it with your own.
-- Search for `my-plugin` to replace the default CSS class prefixes.
-- Also don't forget to edit the fields in the `composer.json` and `sources/package.json` files, and edit the header information in the `index.php` file.
+- Search for `my-plugin` to replace the default CSS class prefixes and production zip name.
+- Also don't forget to edit the fields in the `composer.json`, `sources/package.json` and `tools/package.json` files, and edit the header information in the `index.php` file.
 - Then run following command in the application root directory to install Composer and Node.js dependencies:
 ```bash
-composer install && cd sources && npm install
+composer install && cd sources && npm install && cd ../tools && npm install
 ```
 - Now everything is ready, let's create. 😉
 
@@ -49,10 +49,6 @@ composer run-script webpack-start
 ```bash
 composer run-script webpack-build
 ```
-- Run the `composer install` command with `--no-dev` argument:
-```bash
-composer run-script install-no-dev
-```
 - Optimize Composer autoloader:
 ```bash
 composer run-script optimize-autoloader
@@ -60,6 +56,10 @@ composer run-script optimize-autoloader
 - Get a report from the PHP Code Sniffer:
 ```bash
 composer run-script lint-php
+```
+- Get the zip archive of the application with production files to the `prod-zip` directory (manage the configuration in the `prod-zip.config.json` file):
+```bash
+composer run-script pack-prod-zip
 ```
 
 ## Questions and Answers

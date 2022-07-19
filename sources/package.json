@@ -4,6 +4,7 @@
   "description": "Sources of the plugin assets.",
   "homepage": "https://github.com/wpappy/starter-plugin/blob/main/sources",
   "license": "GPL-2.0-or-later",
+  "private": true,
   "contributors": [
     {
       "name": "Dmitry Pripa",

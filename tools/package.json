@@ -1,0 +1,28 @@
+{
+  "name": "wpappy-starter-plugin-tools",
+  "version": "1.0.0",
+  "description": "Developer tools for Wpappy based application.",
+  "homepage": "https://github.com/wpappy/starter-plugin/blob/main/tools",
+  "license": "GPL-2.0-or-later",
+  "private": true,
+  "contributors": [
+    {
+      "name": "Dmitry Pripa",
+      "email": "i@dpripa.com",
+      "homepage": "https://dpripa.com"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "node": "14",
+  "dependencies": {
+    "fs": "~0.0.1-security",
+    "glob": "~7.2.0",
+    "archiver": "~5.0.0",
+    "log-beautify": "~1.2.0"
+  },
+  "scripts": {
+    "pack-prod-zip": "cd scripts && node pack-prod-zip.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "my-plugin",
+  "dirs": [
+    "assets",
+    "includes",
+    "languages",
+    "templates",
+    "vendor"
+  ],
+  "files": [
+    "index.php",
+    "wpml-config.xml"
+  ]
+}
