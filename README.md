@@ -28,6 +28,7 @@ Boilerplate for developing a WordPress plugin (hereinafter referred to as the ap
 ```
 - Search for `My_Plugin` in the application's root directory to capture default PHP namespace and replace it with your own.
 - Search for `my-plugin` to replace the default CSS class prefixes and production zip name.
+- Rename the `languages/my_plugin.pot` file with the Wpappy application key (also by default this is the PHP namespace of your application in the lower case) which is used as the localization text domain.
 - Also don't forget to edit the fields in the `composer.json`, `sources/package.json` and `tools/package.json` files, and edit the header information in the `index.php` file.
 - Then run following command in the application root directory to install Composer and Node.js dependencies:
 ```bash
